@@ -1,0 +1,83 @@
+/* google fonts*/
+@import url(https://fonts.google.com/specimen/Public+Sans);
+
+:root {
+  /* colors */
+
+  /* primary colors */
+  --clr-primary-1: hsl(233, 26%, 24%); /* Dark Blue */
+  --clr-primary-2: hsl(136, 65%, 51%); /* Lime Green */
+  --clr-primary-3: hsl(192, 70%, 51%); /* Bright Cyan 
+
+ /* neutral colors */
+  --clr-neutral-1: hsl(233, 8%, 62%); /* Grayish Blue */
+  --clr-neutral-2: hsl(220, 16%, 96%); /* Light Grayish Blue */
+  --clr-neutral-3: hsl(0, 0%, 98%); /* Very Light Gray */
+  --clr-neutral-4: hsl(0, 0%, 100%); /* White */
+
+  /* typography */
+
+  --ff-size: 18px;
+}
+
+body {
+  font-size: var(--ff-size);
+  font-family: public sans-serif;
+}
+
+/* services section */
+.services-section {
+  background: var(--clr-neutral-2);
+  color: var(--clr-neutral-1);
+  text-align: center;
+  font-size: 0.985rem;
+}
+
+.services-title,
+.service-title {
+  color: var(--clr-primary-1);
+  text-align: center;
+}
+
+.service-title {
+  text-transform: capitalize;
+  font-size: 1.45rem;
+}
+
+.services-title span {
+  display: block;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .services-title span {
+    max-width: none;
+    text-align: start;
+  }
+  .services-info {
+    text-align: start;
+    max-width: 80%;
+  }
+  .service-title,
+  .service-info,
+  .service-img {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .services-info {
+    max-width: 50%;
+  }
+}
+
+.services-section p,
+h2,
+h1,
+img {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
