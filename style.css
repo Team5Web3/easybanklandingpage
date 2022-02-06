@@ -51,10 +51,13 @@
 
 .btn-request {
     border-radius: 100px;
-    color: var(--clr-neutral-4);
     background: linear-gradient(to right, var(--clr-primary-2), var(--clr-primary-3));
     width: 150px;
     font-size: 15px;
+}
+
+.btn-request:hover {
+    color: var(--clr-neutral-4);
 }
 
 .hero {
@@ -149,18 +152,38 @@
 .card {
     width: 16rem;
 }
+
 .latest-articles {
-    padding: 70px 0px 150px 100px;
+    padding: 70px 0px 120px 130px;
     background-color: var(--clr-neutral-3);
+}
+
+.latest-articles h1 {
+    color: var(--clr-primary-1);
+    font-weight: var(--ff-weight-2);
 }
 
 .latest-articles h5 {
     font-weight: var(--ff-weight-2);
+    font-size: 1.1rem;
+}
+
+.latest-article h5:hover {
+    color: var(--clr-primary-2);
+}
+
+.latest-article a {
+    color: var(--clr-primary-1);
+    text-decoration: none;
 }
 
 .latest-articles p {
-    font-size: 1rem;
+    font-size: 0.83rem;
     color: var(--clr-neutral-1);
+}
+
+.latest-article {
+    margin-right: -28px;
 }
 
 
@@ -184,11 +207,16 @@
 }
 
 .footer-icon {
-    color: var(--clr-neutral-4);
+    margin-left: 5px;
+}
+
+.footer-icon:hover {
+    filter: invert(65%) sepia(87%) saturate(420%) hue-rotate(79deg) brightness(90%) contrast(89%);
 }
 
 .footer-row ul {
     list-style-type: none;
+    padding-left: 70px;
     padding-bottom: 15px;
 }
 
@@ -196,12 +224,21 @@
     margin-bottom: 10px;
 }
 
+.footer-row li a {
+    color: var(--clr-neutral-4);
+    text-decoration: none;
+}
+
+.footer-row li a:hover {
+    color: var(--clr-primary-2);
+}
+
 .footer-row .btn-request {
     margin-left: 280px;
 }
 
 .footer-row p {
-    margin-left: 222px;
+    margin-left: 200px;
 }
 
 
