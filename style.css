@@ -29,6 +29,13 @@
 /* google fonts*/
 @import url(https://fonts.google.com/specimen/Public+Sans);
 
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
 /* nav */
 
 /* fixed navbar during scrolling */
@@ -49,6 +56,27 @@
     margin-right: -30px;
 }
 
+.navbar .navbar-nav .nav-item a:hover {
+    color: var(--clr-primary-1);
+    font-weight: var(--ff-weight-3);
+}
+
+.underline {
+    border-bottom: 3px solid var(--clr-primary-2);
+    width: 60%;
+    margin-left: 20px;
+    display: none;
+}
+
+li:hover .underline {
+    display: block;
+}
+
+.navbar-toggler, .navbar-toggler-icon {
+    border: none;
+    font-size: 1.5rem;
+}
+
 .btn-request {
     border-radius: 100px;
     background: linear-gradient(to right, var(--clr-primary-2), var(--clr-primary-3));
@@ -63,6 +91,8 @@
 .hero {
     background-color: var(--clr-neutral-3);
 }
+
+
 
 /* for scrollable navbar */
 .next-gen-text {
@@ -92,15 +122,18 @@
 .next-gen-img {
     margin: -50px;
     width: 724px;
+    height: 800px;
     background-image: url('images/image-mockups.png'), url('images/bg-intro-desktop.svg');
     background-repeat: no-repeat;
-    /*background-size: 650px, 950px;
-    background-position: top 35% left 240%, top 110% left 10%; */
-    height: 800px;
     background-size: 650px, 950px;
-    background-position: top -1300% left 240%, top -530% left 10%;
+    background-position: top -1300% left 240%, top -530% left;
 }
 
+.next-gen-img-container {
+    overflow: hidden;
+    /* display: inline-block;
+    position: absolute; */
+}
 
 /* for fixed navbar - to use, please first comment out the syntax for scrollable navbar*/
 
@@ -146,15 +179,13 @@
 
 
 
-
-
 /* latest articles */
 .card {
     width: 16rem;
 }
 
 .latest-articles {
-    padding: 70px 0px 120px 130px;
+    padding: 70px 0px 100px 130px;
     background-color: var(--clr-neutral-3);
 }
 
@@ -185,7 +216,6 @@
 .latest-article {
     margin-right: -28px;
 }
-
 
 
 
@@ -233,18 +263,361 @@
     color: var(--clr-primary-2);
 }
 
-.footer-row .btn-request {
-    margin-left: 280px;
+.footer-button {
+    text-align: right;
 }
 
 .footer-row p {
-    margin-left: 200px;
+    text-align: right;
 }
+
+
 
 
 
 /* media queries */
+@media screen and (max-width: 575px) {
+    .next-gen-text {
+        padding: 20px 20px 70px 20px;
+        text-align: center;
+    }
 
-@media screen and (max-width: 375px) {
+    .next-gen-text h1 {
+        padding-right: 0px;
+        font-size: 2.5rem;
+    }
+
+    .next-gen-text p {
+        padding-right: 0px;
+        padding: 0px 10px;
+        font-size: 0.95rem;
+    }
     
+    .next-gen-img {
+        width: 500px;
+        height: 400px;
+        background-image: url('images/image-mockups.png'), url('images/bg-intro-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 350px, 400px;
+        background-position: top 250% left 35%, top 50% left 30%;
+    }
+
+    .next-gen-img-container {
+        order: -1;
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        float: none;
+    }
+
+
+
+    /* why choose section */
+    .why-choose {
+        margin-top: 0px;
+        padding: 70px 10px 50px 10px;
+        text-align: center;
+    }
+
+    .why-choose p {
+        font-size: 0.88rem;
+        padding-right: 0px;
+    }
+
+    .reason {
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+
+
+    /* latest articles */
+    .card {
+        width: 20rem;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .img-to-resize {
+        height: 210px;
+    }
+
+    .latest-articles {
+        padding: 70px 0px 50px 0px;
+    }
+
+    .latest-articles h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+
+    .latest-article {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+
+
+    /* footer */
+    .brand-social {
+        padding-left: 0px;
+        text-align: center;
+        font-style: var(--ff-weight-1);
+    }
+
+    .footer-icon {
+        margin: 20px 0px 30px 15px;
+    }
+
+    .footer-row ul {
+        text-align: center;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+
+    .footer-row .btn-request {
+        margin-left: 0px;
+        margin-top: 30px;
+        color: var(--clr-neutral-4);
+    }
+
+    .footer-button {
+        text-align: center;
+    }
+
+    .footer-row p{
+        margin-left: 0px;
+        padding-bottom: 30px;
+        font-size: 0.8rem;
+        text-align: center;
+        color: var(--clr-neutral-1);
+    }
+}
+
+
+
+@media screen and (min-width:576px) and (max-width: 767px) {
+    .next-gen-text {
+        padding: 0px 20px 20px 20px;
+        text-align: center;
+    }
+
+    .next-gen-text h1 {
+        padding-right: 0px;
+        font-size: 2.5rem;
+    }
+
+    .next-gen-text p {
+        padding-right: 0px;
+        padding: 0px 10px;
+        font-size: 0.95rem;
+    }
+    
+    .next-gen-img {
+        width: 700px;
+        height: 500px;
+        background-image: url('images/image-mockups.png'), url('images/bg-intro-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 500px, 600px;
+        background-position: top 120% left 50%, top 60% right 30%;
+    }
+
+    .next-gen-img-container {
+        order: -1;
+        width: 700px;
+        height: 450px;
+        margin: 0 auto;
+        float: none;
+    }
+
+
+
+    /* why choose section */
+    .why-choose {
+        margin-top: 0px;
+        padding: 70px 10px 50px 10px;
+        text-align: center;
+    }
+
+    .why-choose p {
+        font-size: 0.88rem;
+        padding-right: 0px;
+    }
+
+    .reason {
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+
+
+    /* latest articles */
+    .card {
+        width: 28rem;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .img-to-resize {
+        height: 210px;
+    }
+
+    .latest-articles {
+        padding: 70px 0px 50px 0px;
+    }
+
+    .latest-articles h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+
+    .latest-article {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    
+
+
+
+    /* footer */
+    .brand-social {
+        padding-left: 10px;
+    }
+
+    .footer-icon {
+        margin: 0px -1px 30px 0px;
+    }
+
+    .footer-row ul {
+        padding-left: 0px;
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+
+    .footer-row li {
+        font-size: 0.8rem;
+    }
+
+    .footer-row .btn-request {
+        width: 150px;
+        font-size: 15px;
+        color: var(--clr-neutral-4);
+    }
+
+    .footer-row p{
+        padding-bottom: 30px;
+        font-size: 0.8rem;
+        color: var(--clr-neutral-1);
+    }
+}
+
+
+
+@media screen and (min-width:768px) and (max-width: 991px) {
+
+    .next-gen-text {
+        padding: 20px 20px 50px 20px;
+        text-align: center;
+    }
+
+    .next-gen-text h1 {
+        padding-right: 0px;
+        font-size: 2.5rem;
+    }
+
+    .next-gen-text p {
+        padding-right: 0px;
+        font-size: 0.95rem;
+    }
+    
+    .next-gen-img {
+        width: 850px;
+        height: 500px;
+        background-image: url('images/image-mockups.png'), url('images/bg-intro-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 500px, 600px;
+        background-position: top 80% left 60%, top 30% left 70%;
+    }
+
+    .next-gen-img-container {
+        order: -1;
+        width: 850px;
+        height: 500px;
+        margin: 0 auto;
+        float: none;
+    }
+
+
+
+    /* why choose section */
+    .why-choose {
+        margin-top: 0px;
+        padding: 70px 10px 50px 10px;
+        text-align: center;
+    }
+
+    .why-choose p {
+        font-size: 0.88rem;
+        padding-right: 0px;
+    }
+
+    .reason {
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+
+
+    /* latest articles */
+    .card {
+        width: 20rem;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .img-to-resize {
+        height: 210px;
+    }
+
+    .latest-articles {
+        padding: 70px 0px 50px 0px;
+    }
+
+    .latest-articles h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 70px;
+    }
+
+    .latest-article {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+
+
+    /* footer */
+    .brand-social {
+        padding-left: 0px;
+    }
+
+    .footer-row ul {
+        padding-left: 0px;
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+}
+
+
+
+
+/* media queries for device height */
+
+@media screen and (max-height: 350px) {
+    html {
+        font-size: small;
+    }
 }
