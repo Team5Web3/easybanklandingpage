@@ -611,6 +611,22 @@ li:hover .underline {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .underline {
+        border-bottom: 3px solid var(--clr-primary-2);
+        width: 10%;
+        margin-left: 0px;
+        display: none;
+    }
+
+    li:last-child {
+        margin-bottom: 20px;
+    }
+
+    li:hover .underline {
+        display: block;
+    }
+}
 
 
 
