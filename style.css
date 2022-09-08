@@ -182,6 +182,7 @@ li:hover .underline {
 /* latest articles */
 .card {
     width: 16rem;
+    height: 26rem !important;
 }
 
 .latest-articles {
@@ -194,7 +195,7 @@ li:hover .underline {
     font-weight: var(--ff-weight-2);
 }
 
-.latest-articles h5 {
+.latest-article h5 {
     font-weight: var(--ff-weight-2);
     font-size: 1.1rem;
 }
@@ -208,7 +209,7 @@ li:hover .underline {
     text-decoration: none;
 }
 
-.latest-articles p {
+.latest-article p {
     font-size: 0.83rem;
     color: var(--clr-neutral-1);
 }
@@ -398,7 +399,8 @@ li:hover .underline {
 
 
 
-@media screen and (min-width:576px) and (max-width: 767px) {
+/* @media screen and (min-width >= 576px <= max-width) { */
+    @media screen and (min-width:576px) and (max-width: 767px) {
     .next-gen-text {
         padding: 0px 20px 20px 20px;
         text-align: center;
@@ -455,13 +457,13 @@ li:hover .underline {
 
     /* latest articles */
     .card {
-        width: 28rem;
+        width: 17rem;
         margin: 0 auto;
         float: none;
     }
 
     .img-to-resize {
-        height: 210px;
+        height: 180px;
     }
 
     .latest-articles {
@@ -628,6 +630,12 @@ li:hover .underline {
     }
 }
 
+@media screen and (min-width: 992px) {
+    .card {
+        width: 15rem;
+        margin: 1rem auto;
+    }
+}
 
 
 /* media queries for device height */
